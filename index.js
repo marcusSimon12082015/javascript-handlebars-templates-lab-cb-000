@@ -10,7 +10,9 @@ function init() {
 
 function createRecipe()
 {
+    let ingredients = document.getElementsByName("ingredients");
     var result = document.getElementById("end-process-message").innerHTML += "Recipe created!!!";
+    debugger;
     return result;
 }
 document.addEventListener("DOMContentLoaded", function(event) {
