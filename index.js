@@ -13,9 +13,18 @@ function init() {
 function createRecipe()
 {
     recipe['name'] = document.getElementById("name").value;
-    recipe['description'] = document.getElementById("description").value; 
-    document.getElementsByName("ingredients");
-  
+
+    recipe['description'] = document.getElementById("description").value;
+
+    recipe['ingredients'] = [];
+
+    let ingredientsArray = document.getElementsByName("ingredients");
+     
+    for(let i = 0; i < ingredientsArray.length; i++)
+    {
+          recipe['ingredients'].push(ingredientsArray[i]);
+    }
+
     var result = document.getElementById("end-process-message").innerHTML += "Recipe created!!!";
     debugger;
     return result;
