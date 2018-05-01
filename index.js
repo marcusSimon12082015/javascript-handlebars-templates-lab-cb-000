@@ -6,13 +6,6 @@ function init() {
   var result = formTemplate();
   document.getElementById('centeredDiv').innerHTML += result;
 
-  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById('recipe-details-partial').innerHTML);
-
-  var recipeTemplate = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
-  var recipeResult = recipeTemplate(recipe);
-  document.getElementById('recipeTemplateDiv').innerHTML += recipeResult;
-  
-  
   Handlebars.registerHelper('displayIngredient', function(){
     return new Handlebars.SafeString("<li>" + this.ingredient + "</li>");
   })
@@ -33,6 +26,12 @@ function createRecipe()
           recipe['ingredients'].push(ingredientsArray[i].value);
     }
 
+    Handlebars.registerPartial('recipeDetailsPartial', document.getElementById('recipe-details-partial').innerHTML);
+
+    var recipeTemplate = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
+    var recipeResult = recipeTemplate(recipe);
+    document.getElementById('recipeTemplateDiv').innerHTML += recipeResult;
+    
     var result = document.getElementById("end-process-message").innerHTML += "Recipe created!!!";
     return result;
 }
