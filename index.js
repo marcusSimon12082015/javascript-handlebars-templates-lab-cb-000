@@ -31,7 +31,7 @@ function createRecipe()
     var recipeTemplate = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
     var recipeResult = recipeTemplate(recipe);
     document.getElementById('recipeTemplateDiv').innerHTML += recipeResult;
-    
+
     var result = document.getElementById("end-process-message").innerHTML += "Recipe created!!!";
     return result;
 }
