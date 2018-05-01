@@ -7,7 +7,7 @@ function init() {
   document.getElementById('centeredDiv').innerHTML += result;
 
   var recipeTemplate = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
-  var recipeResult = recipeTemplate();
+  var recipeResult = recipeTemplate(recipe);
   document.getElementById('recipeTemplateDiv').innerHTML += recipeResult;
 
 
