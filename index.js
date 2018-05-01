@@ -5,6 +5,12 @@ function init() {
   var formTemplate = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
   var result = formTemplate();
   document.getElementById('centeredDiv').innerHTML += result;
+
+  var recipeTemplate = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
+  var recipeResult = recipeTemplate();
+  document.getElementById('recipeTemplateDiv').innerHTML += recipeResult;
+
+  
   Handlebars.registerHelper('displayIngredient', function(){
     return new Handlebars.SafeString("<li>" + this.ingredient + "</li>");
   })
