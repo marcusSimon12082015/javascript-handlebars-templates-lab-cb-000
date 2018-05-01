@@ -26,7 +26,6 @@ function createRecipe()
     }
 
     var result = document.getElementById("end-process-message").innerHTML += "Recipe created!!!";
-    debugger;
     return result;
 }
 document.addEventListener("DOMContentLoaded", function(event) {
