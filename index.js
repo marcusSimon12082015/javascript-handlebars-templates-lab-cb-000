@@ -10,7 +10,7 @@ function init() {
   var recipeResult = recipeTemplate();
   document.getElementById('recipeTemplateDiv').innerHTML += recipeResult;
 
-  
+
   Handlebars.registerHelper('displayIngredient', function(){
     return new Handlebars.SafeString("<li>" + this.ingredient + "</li>");
   })
