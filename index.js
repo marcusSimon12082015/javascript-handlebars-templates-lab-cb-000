@@ -1,3 +1,5 @@
+let recipe = {};
+
 function init() {
   //put any page initialization/handlebars initialization here
   var formTemplate = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
@@ -10,7 +12,10 @@ function init() {
 
 function createRecipe()
 {
-    let ingredients = document.getElementsByName("ingredients");
+    recipe['name'] = document.getElementById("name").value;
+    recipe['description'] = document.getElementById("description").value; 
+    document.getElementsByName("ingredients");
+  
     var result = document.getElementById("end-process-message").innerHTML += "Recipe created!!!";
     debugger;
     return result;
