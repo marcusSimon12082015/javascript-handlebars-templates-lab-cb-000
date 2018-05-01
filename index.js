@@ -22,7 +22,7 @@ function createRecipe()
 
     for(let i = 0; i < ingredientsArray.length; i++)
     {
-          recipe['ingredients'].push(ingredientsArray[i]);
+          recipe['ingredients'].push(ingredientsArray[i].value);
     }
 
     var result = document.getElementById("end-process-message").innerHTML += "Recipe created!!!";
