@@ -25,7 +25,7 @@ function createRecipe()
     }
 
     Handlebars.registerHelper('displayIngredient', function(){
-      return new Handlebars.SafeString("<li>" + this.ingredient + "</li>");
+      return new Handlebars.SafeString("<li>" + this.name + "</li>");
     });
     Handlebars.registerPartial('recipeDetailsPartial', document.getElementById('recipe-details-partial').innerHTML);
 
