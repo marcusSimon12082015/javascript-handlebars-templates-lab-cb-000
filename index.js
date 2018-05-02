@@ -6,7 +6,7 @@ function init() {
   var result = formTemplate();
   document.getElementById('centeredDiv').innerHTML += result;
 
-  
+
 }
 
 function createRecipe()
