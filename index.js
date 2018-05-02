@@ -21,7 +21,7 @@ function createRecipe()
 
     for(let i = 0; i < ingredientsArray.length; i++)
     {
-          recipe['ingredients'].push(ingredientsArray[i].value);
+          recipe['ingredients'].push({name: ingredientsArray[i].value});
     }
 
     Handlebars.registerHelper('displayIngredient', function(){
